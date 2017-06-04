@@ -3,14 +3,40 @@
   "version": "0.0.1",
   "license": "MIT",
   "dependencies": {
-    "stats-webpack-plugin": "^0.4.3",
+    "@angular/common": "^2.0.0",
+    "@angular/compiler": "^2.0.0",
+    "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.0.0",
+    "@angular/http": "^2.2.0",
+    "@angular/platform-browser": "^2.0.0",
+    "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/router": "^3.0.0",
+
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.2.2",
     "bootstrap": "3.3.7",
     "css-loader": "^0.23.1",
     "file-loader": "^0.9.0",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "jquery": "^2.1.4"
+    "systemjs": "0.19.40",
+    "zone.js": "^0.7.2",
+    "webpack-dev-server": "^1.16.2",
+    "rxjs": "5.0.1",
+
+    "reflect-metadata": "0.1.10",
+    "stats-webpack-plugin": "^0.4.3",
+
+    "core-js": "^2.4.1",
+    "webpack-merge": "^4.1.0",
+    "coffee-loader": "^0.7.3",
+    "coffee-script": "^1.12.4",
+    "compression-webpack-plugin": "^0.3.2",
+    "glob": "^7.1.1",
+    "path-complete-extname": "^0.1.0",
+    "rails-erb-loader": "^3.2.0",
+    "webpack-merge": "^4.1.0"
   }
 }
