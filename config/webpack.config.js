@@ -13,7 +13,6 @@ var production = process.env.NODE_ENV === 'production';
 
 var config = {
   entry: {
-    // Sources are expected to live in $app_root/webpack
     'application': './webpack/application.js'
   },
 
@@ -45,6 +44,13 @@ var config = {
      {
        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
        loader: "url?limit=10000&mimetype=application/octet-stream"
+     },     
+     {
+       test: /\.html$/,
+       loader: "html-loader",
+       options: {
+         minimize: true
+       }
      },
      {
        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
@@ -54,7 +60,10 @@ var config = {
    },
 
   resolve: {
-    root: path.join(__dirname, '..', 'webpack')
+    modules: [
+      path.join(__dirname, '..', 'webpack'),
+      "node_modules"
+    ]
   },
 
   plugins: [
