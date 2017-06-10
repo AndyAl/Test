@@ -52,3 +52,4 @@ gem 'webpack-rails'
 gem 'bootstrap'
 gem "devise", git: 'https://github.com/plataformatec/devise.git'
 gem "faker"
+gem "foreman"
