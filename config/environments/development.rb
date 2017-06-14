@@ -1,4 +1,18 @@
+#---
+# Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+#---
 Rails.application.configure do
+
+  # existing configuration...
+
+  # Make javascript_pack_tag load assets from webpack-dev-server.
+  # config.x.webpacker[:dev_server_host] = "http://localhost:8080"
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -10,6 +24,7 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports.
+
   config.consider_all_requests_local = true
 
   # Enable/disable caching. By default caching is disabled.
@@ -18,7 +33,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
+      'Cache-Control' => 'public, max-age=172800'
     }
   else
     config.action_controller.perform_caching = false
@@ -51,6 +66,5 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-
-  config.web_console.whitelisted_ips = '95.107.8.210'
+  config.x.webpacker[:dev_server_host] = "http://localhost:8080"
 end

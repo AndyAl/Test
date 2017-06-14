@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+#---
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
@@ -6,7 +14,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = '81e9afec8f616522feeb014cfee604d76fd7f2bf804259ec8d7fe8c2ee6a3fbaa41eec76e6f01a06d2074b86d1a25c88062c70b73a1bcf120a9ee5e17327c8c0'
+  # config.secret_key = '3e7d2ac5f608d4d26f60b0e385fd3b6829dce06526e3650b092709e81e2025f3c46543a0538b8e470e172cf96ce15f5345a6103a62b1f7de905af231abd2fce5'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
@@ -108,12 +116,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '0d9cf64c7db6cefff4c8da73076ece54f70d9df87c52d1a106a4947c7ca87434b41a5d4aba36d82cfcd42ec081a135f2ea27d6877d9e32da58454ce483894bb9'
+  # config.pepper = '1308468ec57578c1d6e297a5286281c46b916a18a9ea2245331cdc1e345d3295836050989179b05004e1c8a2a7ce5f3c2212af4d43b5f55d48afe42820fa79e9'
 
-  # Send a notification to the original email when the user's email is changed.
-  # config.send_email_changed_notification = false
-
-  # Send a notification email when the user's password is changed.
+  # Send a notification email when the user's password is changed
   # config.send_password_change_notification = false
 
   # ==> Configuration for :confirmable
@@ -156,13 +161,8 @@ Devise.setup do |config|
   # config.rememberable_options = {}
 
   # ==> Configuration for :validatable
-  # Range for password length.
   config.password_length = 10..128
-
-  # Email regex used to validate email formats. It simply asserts that
-  # one (and only one) @ exists in the given string. This is mainly
-  # to give user feedback and not to assert the e-mail validity.
-  config.email_regexp = /\A[^@\s]+@[^@\s]+\z/
+  config.email_regexp = /\A[^@]+@example\.com\z/
 
   # ==> Configuration for :timeoutable
   # The time you want to timeout the user session without activity. After this

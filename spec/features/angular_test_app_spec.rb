@@ -10,7 +10,7 @@ require 'rails_helper'
 
 feature "angular test" do
 
-  let(:email)    { "pat@yandex.ru" }
+  let(:email)    { "pat@example.com" }
   let(:password) { "password123" }
 
   before do

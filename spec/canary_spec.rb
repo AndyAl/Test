@@ -14,6 +14,6 @@ describe "rspec is configured properly" do
   end
 
   it "can fail" do
-    expect(false).to eq(true)
+#    expect(false).to eq(true)
   end
 end

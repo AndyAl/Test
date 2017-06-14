@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Rails, Angular, Postgres, and Bootstrap, Second Edition",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material,
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose.
+# Visit http://www.pragmaticprogrammer.com/titles/dcbang2 for more book information.
+#---
 require_relative 'boot'
 
 require "rails"
@@ -18,16 +26,6 @@ Bundler.require(*Rails.groups)
 
 module Shine
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 5.1
-
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
-
-    # Don't generate system test files.
-    config.generators.system_tests = nil
-
     config.active_record.schema_format = :sql
   end
 end
